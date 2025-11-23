@@ -7,9 +7,11 @@ body {
 
 .container {
     margin: 0 109px 0 109px;
+    width: 1233px;
 }
 
 header {
+    border-bottom: 1px solid #CCCCCC;
     padding: 11px 0 11px 0px;
 }
 
@@ -120,6 +122,11 @@ footer .container .cont-footer div:nth-child(2) ul li a {
     color: #FFFFFF;
 }
 
+footer .container .cont-footer div:nth-child(2) ul li a:hover,
+footer .container .cont-footer div:nth-child(3) div div a:hover {
+    color: #4980F2;
+}
+
 footer .container .cont-footer div:nth-child(3) {
     gap: 24px;
 }
@@ -137,17 +144,15 @@ footer .container .cont-footer div:nth-child(3) div div {
 }
 
 footer .container .cont-footer div:nth-child(3) div div a {
-    text-decoration: none;
-}
-
-footer .container .cont-footer div:nth-child(3) div div a span {
     color: #FFFFFF;
     font-family: Inter;
+    text-decoration: none;
 }
 
 footer .copyright {
     border-top: 1px solid #FFFFFF;
     padding: 34px 0 34px 0;
+    width: 100%;
 }
 
 footer .copyright span {

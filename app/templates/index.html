@@ -14,9 +14,9 @@
     {% extends 'base2.html' %}
 
     {% block content %}
-    <main class="flex coluna">
-        <div class="herobanner">
-            <section class="container flex coluna">
+    <main class="flex coluna meio-vertical">
+        <div class="herobanner flex meio-horizontal">
+            <section class="container flex alinhar-extremidades">
                 <div class="texto-herobanner flex coluna">
                     <div class="flex coluna">
                         <h1>Incubadora Tecnológica do IFRN - Zona Norte</h1>
@@ -27,11 +27,18 @@
                     <a class="flex centralizar" href="{{ url_for('sobre') }}">
                         Saber mais
                     </a>
+                    <div class="flex">
+                        <img src="../static/imgs/base/logo ifrn.svg" alt="">
+                        <img src="../static/imgs/index/logo-sebrae-transparente-194541244 1.png" alt="">
+                    </div>
+                </div>
+                <div class="homem flex">
+                    <img class="" src="../static/imgs/index/homem.png" alt="">
                 </div>
             </section>
         </div>
 
-        <div class="o-que-fazemos flex">
+        <div class="o-que-fazemos flex meio-horizontal">
             <section class="container flex alinhar-extremidades meio-vertical">
                 <div class="conteudo flex">
                     <div class="flex coluna">
