@@ -5,11 +5,6 @@ body {
     margin: 0;
 }
 
-.container {
-    margin: 0 109px 0 109px;
-    width: 1233px;
-}
-
 header {
     border-bottom: 1px solid #CCCCCC;
     padding: 11px 0 11px 0px;

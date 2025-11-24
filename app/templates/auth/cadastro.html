@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
-    
 </head>
 <body>
     <main>
-        <section class="left">
-            <h1>oiiiiiiii</h1>
+        <section class="left flex">
+            <section class="container flex meio-vertical alinhar-extremidades">
+                <div class="login flex coluna centralizar">
+                    <div class="flex coluna">
+                        <h1>Login</h1>
+                        <h3>Bem-vindo à Incubadora!</h3>
+                    </div>
+                    <div class="info flex coluna meio-horizontal">
+                        <div class="flex coluna">
+                            <div class="flex coluna">
+                                <label name="email" for="">E-mail:</label>
+                                <input type="email" placeholder="email@exemplo.com">
+                                <span>Digite seu e-mail</span>
+                            </div>
+                            <div class="flex coluna">
+                                <label name="senha" for="">senha:</label>
+                                <input type="password" placeholder="senha">
+                                <div class="flex">
+                                    <span>Digite seu e-mail</span>
+                                    <a href="">Esqueceu sua senha?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                    <h4>Não tem uma conta? <a href="">Clique aqui</a></h4>
+                </div>
+                <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
+            </section>
         </section>
     </main>
 </body>
