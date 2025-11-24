@@ -11,7 +11,7 @@
     <main>
         <section class="left flex centralizar">
             <section class="container flex meio-vertical alinhar-extremidades">
-                <div class="cadastro flex coluna centralizar">
+                <form action="{{ url_for('login') }}" class="cadastro flex coluna centralizar">
                     <div class="titulo flex coluna meio-vertical">
                         <h1>Cadastro</h1>
                         <h3>Preencha seus dados</h3>
@@ -42,7 +42,7 @@
                         <button type="submit">Enviar</button>
                     </div>
                     <h4>Já tem uma conta? <a href="{{ url_for('login') }}">Login</a></h4>
-                </div>
+                </form>
                 <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
             </section>
         </section>
