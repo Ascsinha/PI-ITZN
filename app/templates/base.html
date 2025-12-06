@@ -17,11 +17,7 @@
                 <img src="..//../static/imgs/base/itzn brand.svg" alt="">
             </div>
             <div>
-                {% if  %}
-                    <img src="" alt="">
-                {% else %}
-                    <img src="../static/imgs/base/user-semfoto.png" alt="">
-                {% endif %}
+                <img src="{{ url_for('static', filename = 'imgs/base/default-user.png')}}" alt="">
             </div>
         </section>
     </header>
