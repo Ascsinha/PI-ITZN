@@ -114,6 +114,7 @@ main .left .container .login .info button {
     border: none;
     border-radius: 15px;
     color: #FFFFFF;
+    cursor: pointer;
     height: 36px;
     width: 100%;
 }

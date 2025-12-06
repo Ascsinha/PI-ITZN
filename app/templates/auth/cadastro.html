@@ -16,7 +16,7 @@
                         <h1>Cadastro</h1>
                         <h3>Preencha seus dados</h3>
                     </div>
-                    <div class="info flex coluna meio-horizontal">
+                    <form class="info flex coluna meio-horizontal" action="{{ url_for('login') }}">
                         <div class="form flex coluna">
                             <div class="flex coluna">
                                 <label name="text" for="">Nome:</label>
@@ -28,7 +28,7 @@
                             </div>
                             <div class="flex coluna">
                                 <label name="text" for="">Data de nascimento:</label>
-                                <input type="text" placeholder="00/00/0000">
+                                <input type="text" placeholder="DD/MM/AA" onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
                             </div>
                             <div class="flex coluna">
                                 <label name="email" for="">E-mail:</label>
@@ -36,11 +36,11 @@
                             </div>
                             <div class="flex coluna">
                                 <label name="senha" for="">Senha:</label>
-                                <input type="password" placeholder="Digite sua senha">
+                                <input type="password" onfocus="" placeholder="Digite sua senha">
                             </div>
                         </div>
                         <button type="submit">Enviar</button>
-                    </div>
+                    </form>
                     <h4>Já tem uma conta? <a href="{{ url_for('login') }}">Login</a></h4>
                 </div>
                 <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">

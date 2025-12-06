@@ -34,6 +34,10 @@ def sobre():
 def contato():
     return render_template('main/contato.html', title = 'Contato')
 
+@app.route('/agendamentos')
+def agendamentos():
+    return render_template('main/agendamentos.html', title = "Agendamentos")
+
 @app.route('/esqueci-senha', methods=['GET', 'POST'])
 def esqueciSenha():
     if request.method == 'POST':
