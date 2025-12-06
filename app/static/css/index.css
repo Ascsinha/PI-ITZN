@@ -55,12 +55,13 @@ main .herobanner .container .texto-herobanner a:hover {
     color: #0052FB;
 }
 
-main .herobanner .container .texto-herobanner .homem {
+main .herobanner .container .homem {
+    align-items: flex-end;
 }
 
-main .herobanner .container .texto-herobanner .homem img {
-    height: 674px; 
-    width: 533px;  
+main .herobanner .container .homem img {
+    height: 660px; 
+    width: 498px;  
 }
 
 main .o-que-fazemos {

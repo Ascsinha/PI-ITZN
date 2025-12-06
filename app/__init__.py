@@ -1,9 +1,12 @@
 from flask import Flask
 import os
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_login import LoginManager
 
 app = Flask(__name__)
+db = SQLAlchemy()
+migrate = Migrate()
+login = LoginManager()
 
-# Use an environment variable for SECRET_KEY in production; fallback for local dev
-app.config['SECRET_KEY'] = os.environ.get('ITZN_SECRET_KEY', 'dev-secret-key')
-
-from app import routes
+from app import routes, models
