@@ -8,5 +8,5 @@ def agendamentos():
     return render_template('main/agendamentos.html', title = "Agendamentos")
 
 @main.route('/dashboard')
-def agendamentos():
-    return render_template('main/dashboard.html', title = "Agendamentos")
+def dashboard():
+    return render_template('main/dashboard.html', title = "Dashboard")
