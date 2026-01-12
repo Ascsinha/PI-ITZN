@@ -5,6 +5,6 @@ main = Blueprint('main', __name__)
 
 @main.route('/agendamentos')
 def agendamentos():
-    return render_template('agendamentos.html', title = "Agendamentos")
+    return render_template('main/agendamentos.html', title = "Agendamentos")
 
 

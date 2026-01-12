@@ -9,11 +9,11 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
-    return render_template('login.html', title = 'Log In')
+    return render_template('auth/login.html', title = 'Log In')
 
 @auth.route('/cadastro')
 def cadastro():
-    return render_template('cadastro.html', title = 'Cadastro')
+    return render_template('auth/cadastro.html', title = 'Cadastro')
 
 @auth.route('/esqueci-senha', methods=['GET', 'POST'])
 def esqueciSenha():

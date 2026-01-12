@@ -6,9 +6,9 @@ from config import Config
 
 db = SQLAlchemy()
 migrate = Migrate()
-login = LoginManager()
-login.login_view = 'auth.login'
-login.login_message = 'Você deve estar logado para acessar esta página.'
+# login = LoginManager()
+# login.login_view = 'auth.login'
+# login.login_message = 'Você deve estar logado para acessar esta página.'
 
 def create_app():
     app = Flask(__name__)
@@ -16,7 +16,7 @@ def create_app():
     
     db.init_app(app)
     migrate.init_app(app, db)
-    login.init_app(app)
+    # login.init_app(app)
     
     from .routes.auth import auth
     app.register_blueprint(auth)
@@ -26,5 +26,11 @@ def create_app():
     
     from .routes.usuario import usuario
     app.register_blueprint(usuario)
+    
+    from .routes.index_bp import index_bp
+    app.register_blueprint(index_bp)
+    
+    from .routes.agendamentos import agendamentos
+    app.register_blueprint(agendamentos)
     
     return app 

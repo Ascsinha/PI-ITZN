@@ -7,7 +7,7 @@ import sqlalchemy.orm as so
 from typing import Optional
 import enum
 from werkzeug.security import generate_password_hash, check_password_hash
-from app import db, login
+from app import db
 
 class Generos(enum.Enum):
     __tablename__ = 'generos'
