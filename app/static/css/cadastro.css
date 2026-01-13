@@ -11,6 +11,10 @@ main {
     width: 100%;
 }
 
+main section {
+    gap: 250px;
+}
+
 main .left {
     background-image: url('/static/imgs/cadastro/fundo3.svg');
     background-position: left;
@@ -22,47 +26,46 @@ main .left {
     /* mostra tudo sem cortar */
 }
 
-main .left .container form {
+main .left .container .login {
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 0 1px 10px 10px rgba(0, 36, 112, 0.2);
-    padding: 50px 86px 50px 86px;
+    padding: 72px 86px 72px 86px;
 }
 
-main .left form .titulo {
+main .left .login .titulo {
     gap: 2px;
-    margin-bottom: 29px;
+    margin-bottom: 39px;
 }
 
 
-main .left .container form div h1 {
+main .left .container .login div h1 {
     color: #0052FB;
     font-family: Ubuntu;
     font-weight: 700;
 }
 
-main .left .container form div h3 {
+main .left .container .login div h3 {
     color: #4D4D4D;
     font-family: Inter;
     font-weight: 500;
 }
 
-main .left form .info {
+main .left .login .info {
     gap: 36px;
-    margin-bottom: 35px;
 }
 
-main .left form .info .form {
+main .left .login .info .form {
     gap: 17px;
 }
 
-main .left .container form .info label,
-main .left .container form button {
+main .left .container .login .info label,
+main .left .container .login button {
     font-family: Inter;
     font-size: 16px;
 }
 
-main .left .container form .info .form input {
+main .left .container .login .info .form input {
     border: 1px solid #83ACFF;
     border-radius: 15px;
     color: #83ACFF;
@@ -71,29 +74,45 @@ main .left .container form .info .form input {
     width: 298px;
 }
 
-main .left .container form .info .form input:hover {
+main .left .container .login .info .form input:hover {
     background: #F2F6FF;
     border: 1px solid #83ACFF;
 }
 
-main .left .container form .info .form input:focus {
-    border: 2px solid #4980F2;
+main .left .container .login .info .form input:focus {
+    border: 2px solid var(--blue-400, #4980F2);
     box-shadow: 0 0 10px 0 #0052FB;
 }
 
-main .left .container form .info .form :invalid {
+main .left .container .login .info .form :invalid {
     border: 1px solid #FF4646;
     color: #FF4646;
 }
 
-main .left .container form .info .form input::-webkit-input-placeholder {
+main .left .container .login .info .form input::-webkit-input-placeholder {
     color: #83ACFF;
     font-family: Inter;
     font-size: 16px;
     font-weight: 300;
 }
 
-main .left .container form .info button {
+main .left .container .login .info .form span,
+main .left .container .login .info .form a {
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+main .left .container .login .info .form a {
+    color: #1246B2;
+    font-family: Lato;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+main .left .container .login .info button {
     background-color: #0052FB;
     border: none;
     border-radius: 15px;
@@ -103,14 +122,14 @@ main .left .container form .info button {
     width: 100%;
 }
 
-main .left .container form h4 {
+main .left .container .login h4 {
     color: #4D4D4D;
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
 }
 
-main .left .container form h4 a {
+main .left .container .login h4 a {
     color: #1246B2;
     font-family: Ubuntu;
     font-size: 16px;

@@ -11,6 +11,10 @@ main {
     width: 100%;
 }
 
+main section {
+    gap: 250px;
+}
+
 main .left {
     background-image: url('/static/imgs/cadastro/fundo3.svg');
     background-position: left;
@@ -49,7 +53,6 @@ main .left .container .login div h3 {
 
 main .left .login .info {
     gap: 36px;
-    margin-bottom: 53px;
 }
 
 main .left .login .info .form {

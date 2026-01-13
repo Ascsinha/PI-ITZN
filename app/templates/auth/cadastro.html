@@ -11,40 +11,35 @@
     <main>
         <section class="left flex centralizar">
             <section class="container flex meio-vertical alinhar-extremidades">
-                <form action="{{ url_for('auth.login') }}" class="cadastro flex coluna centralizar">
+                <form class="login flex coluna centralizar">
                     <div class="titulo flex coluna meio-vertical">
                         <h1>Cadastro</h1>
-                        <h3>Preencha seus dados</h3>
+                        <h3>Preencha com os seus dados</h3>
                     </div>
-                    <form class="info flex coluna meio-horizontal" action="{{ url_for('auth.login') }}">
+                    <div class="info flex coluna meio-horizontal">
                         <div class="form flex coluna">
                             <div class="flex coluna">
-                                <label name="text" for="">Nome:</label>
-                                <input type="text" placeholder="Digite seu nome completo">
+                                <label name="nome" for="">Nome:</label>
+                                <input type="text" placeholder="Seu nome">
+                                <span>Digite seu nome</span>
                             </div>
                             <div class="flex coluna">
-                                <label name="text" for="">CPF:</label>
-                                <input type="text" placeholder="000.000.000-00">
-                            </div>
-                            <div class="flex coluna">
-                                <label name="text" for="">Data de nascimento:</label>
-                                <input type="text" placeholder="DD/MM/AA" onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
+                                <label name="CPF" for="">CPF:</label>
+                                <input type="date" placeholder="00/00/0000">
+                                <span>Digite seu CPF</span>
                             </div>
                             <div class="flex coluna">
                                 <label name="email" for="">E-mail:</label>
-                                <input type="email" placeholder="Digite seu e-mail">
-                            </div>
-                            <div class="flex coluna">
-                                <label name="senha" for="">Senha:</label>
-                                <input type="password" onfocus="" placeholder="Digite sua senha">
+                                <input type="email" placeholder="email@exemplo.com">
+                                <span>Digite seu e-mail</span>
                             </div>
                         </div>
                         <button type="submit">Enviar</button>
                     </form>
-                    <h4>Já tem uma conta? <a href="{{ url_for('auth.login') }}">Login</a></h4>
-                </form>
-                <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
+                    <h4>Não tem uma conta? <a href="{{ url_for('auth.cadastro') }}">Clique aqui</a></h4>
+                </div>
             </section>
+            <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
         </section>
     </main>
 </body>
