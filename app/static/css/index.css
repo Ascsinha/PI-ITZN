@@ -42,7 +42,7 @@ main .herobanner .container .texto-herobanner a {
     border: 2px solid #FFFFFF;
     border-radius: 30px;
     color: #FFFFFF;
-    font-family: Inter;
+    font-family: Lato;
     font-size: 24px;
     font-weight: 400;
     padding: 15px 0 15px 0;
@@ -53,6 +53,7 @@ main .herobanner .container .texto-herobanner a {
 main .herobanner .container .texto-herobanner a:hover {
     background-color: #FFFFFF;
     color: #0052FB;
+    transition: background-color 0.3s ease-in-out;
 }
 
 main .herobanner .container .homem {
