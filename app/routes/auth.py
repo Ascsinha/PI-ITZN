@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
-from flask_login import current_user, login_user, logout_user
+from flask_login import current_user, login_user, logout_user, login_required
 from ..models import Usuario
 import sqlalchemy as sa
 from ..forms.auth import LoginForm, RegistrationForm
@@ -36,6 +36,7 @@ def cadastro():
     return render_template('auth/cadastro.html', title = 'Cadastro', form = form)
 
 @auth.route('/esqueci-senha', methods=['GET', 'POST'])
+@login_required
 def esqueciSenha():
     if request.method == 'POST':
         email = request.form.get('email', '').strip()
@@ -51,6 +52,11 @@ def esqueciSenha():
     return render_template('auth/esqueci-senha.html', title='Esqueci a Senha')
 
 @auth.route('/logout')
+@login_required
 def logout():
     logout_user()
     return redirect(url_for('index_bp.index'))
+
+@auth.user_loader
+def load_user(user_id):
+    return Usuario.query.filter(Usuario.id == int(user_id)).first()
