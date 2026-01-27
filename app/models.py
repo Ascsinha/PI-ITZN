@@ -58,15 +58,6 @@ class Professor(Usuario):
     id: so.Mapped[int] = so.mapped_column(sa.ForeignKey("usuario.id"), primary_key = True)
     id_professor: so.Mapped[int] = so.mapped_column(sa.Integer)
     matricula: so.Mapped[int] = so.mapped_column(sa.Integer, nullable = False)
-    __table_args__ = (
-        sa.CheckConstraint(
-            or_(
-                and_(Usuario.tipo_usuario == TiposUsuario.PROFESSOR, matricula >= 0, matricula <= 999999),
-                and_(Usuario.tipo_usuario != TiposUsuario.PROFESSOR, matricula == None)
-            ),
-            name = "ck_matricula_range"
-        ),
-    )
     
     def __repr__(self):
         return f'<Professor {self.nome}>'
