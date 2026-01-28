@@ -6,6 +6,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="shortcut icon" href="../../static/imgs/favicon/logo-itzn.ico" type="image/x-icon">
 </head>
 <body>
     <main>
@@ -16,7 +17,7 @@
                         <h1>Login</h1>
                         <h3>Bem-vindo à Incubadora!</h3>
                     </div>
-                    <div class="info flex coluna meio-horizontal">
+                    <div class="info flex coluna centralizar">
                         <div class="form flex coluna">
                             <div class="flex coluna">
                                 <label name="email" for="">E-mail:</label>
@@ -27,7 +28,7 @@
                                 <label name="senha" for="">Senha:</label>
                                 <input type="password" placeholder="senha">
                                 <div class="flex alinhar-extremidades">
-                                    <span>Digite seu e-mail</span>
+                                    <span>Digite sua senha</span>
                                     <a href="{{ url_for('auth.esqueciSenha') }}">Esqueceu sua senha?</a>
                                 </div>
                             </div>
@@ -36,8 +37,8 @@
                     </form>
                     <h4>Não tem uma conta? <a href="{{ url_for('auth.cadastro') }}">Clique aqui</a></h4>
                 </div>
-                <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
             </section>
+            <img src="../../static/imgs/cadastro/Frame 7.svg" alt="">
         </section>
     </main>
 </body>
